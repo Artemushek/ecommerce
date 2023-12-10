@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import { Media } from '../../../_components/Media'
 import { Price } from '../../../_components/Price'
-import { formatDateTime } from '../../../_utilities/formatDateTime'
 import { getMeUser } from '../../../_utilities/getMeUser'
 
 import classes from './index.module.scss'
@@ -39,9 +38,7 @@ export default async function Purchases() {
                                             <div className={classes.itemDetails}>
                                                 <h6>{purchase.title}</h6>
                                                 <Price product={purchase} />
-                                                <p className={classes.purchasedDate}>{`Purchased On: ${formatDateTime(
-                                                    purchase.createdAt,
-                                                )}`}</p>
+                                                <p className={classes.purchasedDate}>{`For detailed information about purchased product check "My Orders"`}</p>
                                             </div>
                                         </Link>
                                     )}
