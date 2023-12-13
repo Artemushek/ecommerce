@@ -11,6 +11,7 @@ import { Footer, Media } from '../../../../payload/payload-types'
 
 import classes from './index.module.scss'
 import { Button } from '../../Button'
+import { HR } from '../../HR'
 
 const FooterComponent = ({ footer }: { footer: Footer }) => {
 
@@ -36,13 +37,13 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                     ))}
                 </ul>
             </Gutter>
-
+            <img src="../../../assets/images/hero-2.jpg" className={classes.picture} />
             <div className={classes.footer}>
                 <Gutter>
                     <div className={classes.wrap}>
                         <Link href="/">
                             <Image
-                                src="/logo-white.svg"
+                                src="/logo-white.png"
                                 alt="logo"
                                 width={170}
                                 height={50}

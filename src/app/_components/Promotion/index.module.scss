@@ -2,31 +2,41 @@
 
 .promotion {
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 50% 2fr;
     gap: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
 
     @include small-break {
         grid-template-columns: 1fr;
     }
 }
 
-.title {
-    font-weight: 400;
-}
-
 .textBox {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: center;
     gap: 30px;
 }
 
+.title {
+    font-weight: 700;
+}
+
 .image {
-    min-height: 500px;
+    display: grid;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.stats {
+    display: grid;
+
+    gap: 30px;
+    grid-template-columns: repeat(4, 100px);
+
+    @include large-break {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .dealBtn {
@@ -37,21 +47,11 @@
     }
 }
 
-.stats {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(4, 100px);
-
-    @include large-break {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .statBox {
     border-radius: 10px;
     border: 1px solid var(--color-dark-60);
     padding: 16px;
-    min-width: 100px;
+    max-height: 120px;
     width: 100%;
     text-align: center;
 

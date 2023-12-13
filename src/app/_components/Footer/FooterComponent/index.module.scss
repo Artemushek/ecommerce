@@ -17,7 +17,7 @@
     gap: 30px;
     padding: 0;
     grid-template-columns: repeat(4, 1fr);
-    margin: 100px 0;
+    margin: 50px 0 100px 0;
 
     @include large-break {
         grid-template-columns: repeat(2, 1fr);
@@ -30,6 +30,10 @@
     @include extra-small-break {
         grid-template-columns: 1fr;
     }
+}
+
+.picture {
+    margin-bottom: 0px;
 }
 
 .icon {

@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react'
 
 import classes from './index.module.scss'
+import { HR } from '../HR'
+import Link from 'next/link'
 
 const Promotion = () => {
     const [time, setTime] = useState({
@@ -40,12 +42,10 @@ const Promotion = () => {
     return (
         <section className={classes.promotion}>
             <div className={classes.textBox}>
-                <h3 className={classes.title}>Deals of the Month</h3>
-                <p>
-                    Get ready for a shopping experience like never before with our Deals of the Month! Every
-                    purchase comes with exclusive perks and offers, making this month a celebration of savvy
-                    choices and amazing deals. Don't miss out! 🎁🛒
-                </p>
+                <h3 className={classes.title}>DEAL OF THE MONTH</h3>
+                <h5 className={classes.title}>
+                    Unlock the melody of savings with our Deal of the Month! Dive into a symphony of discounts, where quality meets affordability. Don't miss out your passion for music while enjoying exclusive offers on top-notch instruments! 🎁🛒
+                </h5>
 
                 <ul className={classes.stats}>
                     <StatBox label="Days" value={time.days} />
@@ -54,6 +54,10 @@ const Promotion = () => {
                     <StatBox label="Seconds" value={time.seconds} />
                 </ul>
             </div>
+            <Link href="/products">
+                <img src="../../../assets/images/promo+.jpg" className={classes.image} />
+            </Link>
+
         </section>
     )
 }
