@@ -41,7 +41,7 @@ const nextConfig = {
       headers: [
         {
           key: 'Content-Security-Policy',
-          value: ContentSecurityPolicy,
+          value: error,
         },
       ],
     })
